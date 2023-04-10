@@ -4,12 +4,12 @@
     --darkedCyan: hsl(159, 100%, 12%);
     --cream: hsl(30, 38%, 92%);
     /*Neutral*/
-    --veryDarkBlue:hsl(212, 21%, 14%);
-    --darkGrayishBlue:hsl(228, 12%, 48%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
     --white: hsl(0, 0%, 100%);
     /*Fonts*/
-    --monserrat:'Monserrat',sans-serif;
-    --fraunces:'Fraunces',serif;
+    --monserrat: 'Monserrat', sans-serif;
+    --fraunces: 'Fraunces', serif;
 }
 
 
@@ -25,11 +25,11 @@ html {
 }
 
 /*globales*/
-img{
+img {
     width: 100%;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,64 +40,69 @@ body{
 
 
 /*main container*/
-.main-container{
+.main-container {
     width: 90%;
     height: 100vh;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
+
 /*card*/
-.card{
+.card {
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
     width: 90%;
     height: 75vh;
 }
-@media(min-width:768px){
-    .card{
+
+@media(min-width:768px) {
+    .card {
         width: 55rem;
         height: unset;
         grid-template-rows: unset;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-.card__image img{
+.card__image img {
     background-image: url("../images/image-product-mobile.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 25rem;
-    border-radius: 1rem 1rem 0 0 ;
-    
-}
-@media(min-width:768px){
-    .card__image img{
-        height: unset;
-        border-radius: 1rem 0 0 1rem;
-}
+    border-radius: 1rem 1rem 0 0;
+
 }
 
-.card__information{   
+@media(min-width:768px) {
+    .card__image img {
+        height: unset;
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+
+.card__information {
     background-color: var(--white);
     padding-bottom: 2.5rem;
     border-radius: 0 0 1rem 1rem;
 }
 
-@media(min-width:768px){
-    .card__information{   
-    border-radius: 0 1rem 1rem 0rem;
-}
+@media(min-width:768px) {
+    .card__information {
+        padding-bottom: unset;
+        border-radius: 0 1rem 1rem 0rem;
+    }
 }
 
 /*perfume*/
-.perfume{
-    padding:2rem 2rem 0 2rem;
+.perfume {
+    padding: 2rem 2rem 0 2rem;
 }
-.perfume__title{
+
+.perfume__title {
     text-transform: uppercase;
     color: var(--darkGrayishBlue);
     letter-spacing: 0.5rem;
@@ -105,13 +110,14 @@ body{
     font-weight: 500;
 }
 
-.perfume__name{
+.perfume__name {
     font-family: var(--fraunces);
     font-weight: bold;
     padding-right: 3rem;
     font-size: 3rem;
 }
-.perfume__description{
+
+.perfume__description {
     font-family: var(--monserrat);
     color: var(--darkGrayishBlue);
     font-size: 1.4rem;
@@ -119,33 +125,33 @@ body{
     font-weight: 500;
     padding-right: 3rem;
     text-align: left;
-    
+
 }
 
-.perfume__prices{
+.perfume__prices {
     display: flex;
     gap: 2rem;
     margin-bottom: 3rem;
 }
 
-.perfume__prices--a-price{
+.perfume__prices--a-price {
     font-size: 3rem;
     font-family: var(--fraunces);
     margin: 0;
     color: var(--darkCyan);
 }
 
-.perfume__prices--o-price{
+.perfume__prices--o-price {
     color: var(--darkGrayishBlue);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    text-decoration:line-through;
+    text-decoration: line-through;
 }
 
 /*button*/
-.perfume__button{
+.perfume__button {
     display: inline-block;
     width: 100%;
     background-color: var(--darkedCyan);
@@ -158,9 +164,9 @@ body{
     font-size: 1.2rem;
 }
 
-.perfume__button::before{
+.perfume__button::before {
     content: url("../images/icon-cart.svg");
-    vertical-align:middle;
+    vertical-align: middle;
     margin-right: 1rem;
 }
 
